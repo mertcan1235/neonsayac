@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#080b14">
+  <title>NEON | Sayaç</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Tam ekran butonu -->
+  <button
+    id="fullscreenBtn"
+    class="fullscreen-btn"
+    onclick="toggleFullscreen()"
+    aria-label="Tam ekrana geç"
+    title="Tam ekran"
+  >
+    <svg id="fullscreenIcon" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor"
+         stroke-width="2" stroke-linecap="round"
+         stroke-linejoin="round">
+      <path d="M8 3H5a2 2 0 0 0-2 2v3"/>
+      <path d="M16 3h3a2 2 0 0 1 2 2v3"/>
+      <path d="M21 16v3a2 2 0 0 1-2 2h-3"/>
+      <path d="M3 16v3a2 2 0 0 0 2 2h3"/>
+    </svg>
+  </button>
+
+  <main class="card">
+    <h1>NEON<span>.</span></h1>
+    <p class="subtitle">TIME CONTROL</p>
+
+    <div id="timer">00:00.00</div>
+    <p id="status">HAZIR</p>
+
+    <div class="buttons">
+      <button class="start" onclick="startTimer()">▶ Başlat</button>
+      <button onclick="pauseTimer()">Ⅱ Duraklat</button>
+      <button onclick="resetTimer()">↻ Sıfırla</button>
+    </div>
+
+    <p class="hint">SPACE: Başlat / Duraklat · R: Sıfırla</p>
+    <p class="fullscreen-hint">⛶ TAM EKRAN ZAMANLAYICI</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
